@@ -119,6 +119,7 @@ footer > div {
 /* Mobile view */
 @media only screen and (max-width: 37.5rem) {
   body {
+    min-height: 0;
     margin: 24px;
     display: flex;
     flex-direction: column;

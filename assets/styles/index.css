@@ -2,9 +2,12 @@
   margin: 0;
 }
 body {
-  display: flex;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
   background-color: hsl(30, 38%, 92%);
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -72,7 +75,8 @@ button {
   background-color: hsl(158, 36%, 37%);
   border-style: none;
   border-radius: 8px;
-  display: flex;align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 16px;
@@ -86,4 +90,76 @@ button p {
 }
 button:hover {
   background-color: hsl(212, 21%, 14%);
+}
+/* Attribution */
+footer > div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px;
+}
+.attribution {
+  color: hsl(212, 21%, 14%);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  cursor: auto;
+}
+.attribution a {
+  color: hsl(212, 21%, 14%);
+  font-weight: 700;
+  text-decoration: none;
+  float: none;
+}
+/* Mobile view */
+@media only screen and (max-width: 37.5rem) {
+  body {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: hsl(30, 38%, 92%);
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+  }
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    border-radius: 8px;
+  }
+  #image,
+  #content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 160%;
+    gap: 16px;
+  }
+  h1,
+  p.description {
+    max-width: 100%;
+  }
+  h1,
+  .currentPrice {
+    font-size: 32px;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
 }
